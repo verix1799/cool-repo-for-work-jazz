@@ -1,0 +1,33 @@
+@media (min-width:800px) {
+    body {
+        margin-left: 2%;
+
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a {
+        margin-top: 1.4rem;
+        float: right;
+        color: red;
+        text-decoration: none;
+    }
+
+    img {
+        float: left;
+        padding-right: 5%;
+    }
+
+    div {
+        padding: 5% 0;
+        height: 50px;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 12px;
+    }
+}

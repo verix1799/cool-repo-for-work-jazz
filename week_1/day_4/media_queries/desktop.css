@@ -1,0 +1,21 @@
+@media (min-width: 1000px) {
+    body {
+        background-color: antiquewhite;
+    }
+
+    body>header {
+        flex-direction: row;
+    }
+
+    body>header>nav>ul {
+        align-items: center;
+    }
+
+    body>main {
+        flex-direction: row;
+    }
+
+    body>main>article {
+        padding: 0 100px;
+    }
+}
