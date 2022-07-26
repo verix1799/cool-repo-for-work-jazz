@@ -1,0 +1,155 @@
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr;
+    grid-template-areas:
+        "nav nav nav nav"
+        "sidebar main main main"
+        "sidebar content content content";
+    grid-gap: 0.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #004d40;
+    text-align: center;
+}
+
+nav {
+    background: #a7ffeb;
+    grid-area: nav;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+main {
+    background: #84ffff;
+    grid-area: main;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+li {
+    list-style: none;
+}
+
+#sidebar {
+    background: #18ffff;
+    grid-area: sidebar;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#content1 {
+    grid-area: content;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#album-list {
+    display: grid;
+
+}
+
+.album-list-item {
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 2.5rem 5rem rgba(6, 22, 141, 0.0442381);
+    font-size: 1.6em;
+    padding: 2em 1.75em 2.2em;
+    min-height: 15.9rem;
+
+}
+
+
+.title,
+.artist {
+    font-size: 2rem;
+    font-weight: var(--extra-bold);
+    color: var(--dark-purple);
+    margin-bottom: 1.7rem;
+}
+
+.description {
+    color: var(--gray);
+
+    margin-bottom: 2.5rem;
+}
+
+.album-button {
+    all: unset;
+    color: var(--light-red);
+    font-weight: var(--bold);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color .18s ease-in-out;
+    position: absolute;
+    bottom: 1.95em;
+}
+
+.album-button :hover {
+    color: var(--pink);
+}
+
+@media (min-width: 1200px) {
+
+    #album-list {
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "list1 list2";
+        margin-bottom: 23.6rem;
+    }
+
+
+    .album-list-item {
+        grid-area: list1;
+        border-radius: 1.5rem;
+        min-height: 8.2rem;
+    }
+
+    .album-list-item2 {
+        grid-area: list2;
+    }
+
+    .album-list-item {
+        padding: 2em 2.1em 2.2em 2em;
+    }
+
+    .heading {
+        font-size: 2.2rem;
+        padding: 2em 1em;
+        line-height: 1.25em;
+    }
+
+    .album-logo {
+        margin-bottom: -2.8rem;
+    }
+
+
+
+    .title,
+    .artist {
+        font-size: 1.4rem;
+        margin-bottom: 2.3rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+
+    }
+
+    .album-button {
+        bottom: 2.4em;
+    }
+
+}

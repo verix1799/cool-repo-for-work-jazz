@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Album List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  <script src="js/app.js"></script>
+</head>
+
+<body>
+
+  <h1 class="main-heading">Album List</h1>
+
+  <form id="new-album-form">
+    <label for="title">Title name</label>
+    <input type="text" id="title"></input>
+
+    <label for="artist">Artist name</label>
+    <input type="text" id="artist"></input>
+
+    <label for="genre">Genre</label>
+    <select id="genre">
+      <option value="rap">Rap</option>
+      <option value="hip-hop">Hip Hop</option>
+      <option value="pop">Pop</option>
+      <option value="indie">Indie</option>
+      <option value="rock">Rock</option>
+    </select>
+
+    <label for="date">Release Date</label>
+    <input type="date" id="date" class="date-input"></input>
+
+    <input type="checkbox" class="padding" id="kids">
+    <label for="kids">Kid friendly</label>
+    <textarea id="description" class="textarea" rows="4" cols="50"></textarea>
+
+    <input type="submit" class="padding"></input>
+  </form>
+
+
+
+  <ul id="album-list">
+    <li class="album-header">
+      <h1 class="heading">Your Albums</h1>
+    </li>
+  </ul>
+</body>
+
+</html>

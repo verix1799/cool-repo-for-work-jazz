@@ -21,11 +21,20 @@ var handleButtonClick = function () {
 
   setDefinitionText('#name-display', pet.name);
   setDefinitionText('#species-display', pet.species);
+
+  let jsonString = JSON.stringify(pet);
+  localStorage.setItem('pet', jsonString);
 }
 
 var app = function () {
   var button = document.querySelector('button');
   button.addEventListener('click', handleButtonClick);
+
+  let jsonString = localStorage.getItem('pet')
+  let savedPet = JSON.parse(jsonString)
+  setDefinitionText('#name-display', savedPet.name)
+  setDefinitionText('#species-display', savedPet.species)
+
 }
 
 window.addEventListener('load', app);

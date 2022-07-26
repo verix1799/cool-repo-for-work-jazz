@@ -1,0 +1,217 @@
+:root {
+    --purple: hsl(234, 25%, 52%);
+    --dark-purple: hsl(233, 54%, 16%);
+    --gray: hsl(232, 10%, 56%);
+    --light-red: hsl(341, 92%, 62%);
+    --pink: hsl(341, 100%, 83%);
+    --white: hsl(0, 0%, 100%);
+    --very-light-blue: hsl(236, 100%, 97%);
+    --orange: hsl(13, 100%, 64%);
+    --magenta: hsl(322, 87%, 55%);
+    --blue: hsl(237, 100%, 64%);
+
+    --medium: 500;
+    --bold: 700;
+    --extra-bold: 800;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+li {
+    list-style-type: none;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    background-image: linear-gradient(var(--white), var(--very-light-blue));
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.heading {
+    padding: 1em 1.16666667em;
+    color: var(--white);
+    font-size: 2.4rem;
+    font-weight: var(--extra-bold);
+    line-height: 1.35em;
+}
+
+#new-album-form {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.form-item {
+    margin-right: 1.8rem;
+}
+
+label {
+    margin: 1.2rem;
+    ;
+    font-size: 1.5rem;
+    ;
+}
+
+label.primary {
+    display: block;
+    margin: 0.4em 0;
+}
+
+label::after {
+    content: ":";
+}
+
+.date-input {
+    width: 100%;
+}
+
+.padding {
+    margin: 1.2rem;
+}
+
+.textarea {
+    width: 100%;
+}
+
+button,
+input[type="submit"] {
+    margin-top: 1rem;
+}
+
+/* Album Lists */
+#album-list {
+    display: grid;
+    gap: 4rem;
+    margin-bottom: 18.4rem;
+}
+
+.album-header {
+    min-height: 12rem;
+    background-image: linear-gradient(var(--orange), var(--magenta));
+    border-radius: 1rem;
+}
+
+
+
+.album-list-item {
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 2.5rem 5rem rgba(6, 22, 141, 0.0442381);
+    font-size: 1.6em;
+    padding: 2em 1.75em 2.2em;
+    min-height: 25.9rem;
+    position: relative;
+}
+
+
+.title,
+.artist {
+    font-size: 2rem;
+    font-weight: var(--extra-bold);
+    color: var(--dark-purple);
+    margin-bottom: 1.7rem;
+}
+
+.description {
+    color: var(--gray);
+
+    margin-bottom: 2.5rem;
+}
+
+.album-button {
+    all: unset;
+    color: var(--light-red);
+    font-weight: var(--bold);
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color .18s ease-in-out;
+    position: absolute;
+    bottom: 1.95em;
+}
+
+.album-button :hover {
+    color: var(--pink);
+}
+
+
+@media (min-width: 700px) {
+    body {
+        padding: 2.4rem calc(40 / 768 * 100%) 2.4rem calc(39 / 768 * 100%);
+        background: url(./assets/image-hero-tablet@2x.png);
+        background-repeat: no-repeat;
+        background-size: 69.5rem;
+        background-position: left 48.3vw top -12.1vw;
+        overflow-x: hidden;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    body {
+        padding: 2.4rem calc(165 / 1440 * 100%) 2.4rem;
+        background: url(./assets/image-hero-desktop@2x.png);
+        background-repeat: no-repeat;
+        background-size: 104.6rem;
+        background-position: left 50.7vw top -10.2vw;
+    }
+
+
+
+    #album-list {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 8rem 3rem;
+        margin-bottom: 23.6rem;
+    }
+
+    .album-header,
+    .album-list-item {
+        border-radius: 1.5rem;
+        min-height: 32.2rem;
+    }
+
+    .album-list-item {
+        padding: 2em 2.1em 2.2em 2em;
+    }
+
+    .heading {
+        font-size: 3.2rem;
+        padding: 2em 1em;
+        line-height: 1.25em;
+    }
+
+    .album-logo {
+        margin-bottom: -2.8rem;
+    }
+
+
+
+    .title,
+    .artist {
+        font-size: 2.4rem;
+        margin-bottom: 2.3rem;
+    }
+
+    .description {
+        font-size: 1.8rem;
+
+    }
+
+    .album-button {
+        bottom: 2.4em;
+    }
+
+}
