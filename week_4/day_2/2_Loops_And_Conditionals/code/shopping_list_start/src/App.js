@@ -13,7 +13,7 @@ function App() {
       <li key={index} className={item.isPurchased ? 'purchased' : 'not-purchased'} >
         <span>{item.name}</span>
         {item.isPurchased ? <span className='purchased'>Purchased</span> : <button onClick={() => purchasedItem(index)}>Purchase</button>}
-      </li > //returns array of itemsa
+      </li > //returns array of items
     )
   });
 
